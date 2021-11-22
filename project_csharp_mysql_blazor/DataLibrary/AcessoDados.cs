@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataLibrary
 {
-    public class AcessoDados
+    public class AcessoDados : IAcessoDados
     {
         public List<T> CarregaDado<T, U>(string sql, U parametros, string stringDeConexaoDB)
         {
