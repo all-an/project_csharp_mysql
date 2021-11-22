@@ -22,12 +22,12 @@ namespace DataLibrary
             }
         }
 
-        public void SalvaDado<T>(string sql, T parametros, string stringDeConexaoDB)
+        public Task SalvaDado<T>(string sql, T parametros, string stringDeConexaoDB)
         {
             //conexão com o banco de dados
             using (IDbConnection conexao = new MySqlConnection(stringDeConexaoDB))
             {
-                conexao.Execute(sql, parametros);
+                return conexao.ExecuteAsync(sql, parametros);
             }
         }
     }
