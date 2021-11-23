@@ -6,7 +6,9 @@
 @inject IAcessoDados _dados
 @inject IConfiguration _config
 
-<h3>Pessoas</h3>
+<h3>Responsáveis pelos setores:</h3>
+
+<button class="btn btn-primary" @onclick="InserirDado">Inserir</button>
 
 @if (pessoas == null)
 {
@@ -24,6 +26,11 @@ else
 
 @code {
     List<PessoasModel> pessoas;
+
+    private async Task InserirDado()
+    {
+        string sql = "insert into departamento (DepartamentoNome, Responsavel) values ";
+    }
 
     protected override async Task OnInitializedAsync()
     {
