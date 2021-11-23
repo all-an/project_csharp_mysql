@@ -11,12 +11,12 @@ namespace DataLibrary
 {
     public class AcessoDados : IAcessoDados
     {
-        public List<T> CarregaDado<T, U>(string sql, U parametros, string stringDeConexaoDB)
+        public async Task<List<T>> CarregaDado<T, U>(string sql, U parametros, string stringDeConexaoDB)
         {
             //conexão com o banco de dados
             using (IDbConnection conexao = new MySqlConnection(stringDeConexaoDB))
             {
-                List<T> rows = conexao.Query<T>(sql, parametros).ToList();
+                var rows = await conexao.QueryAsync<T>(sql, parametros);
 
                 return rows;
             }
