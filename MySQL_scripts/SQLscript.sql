@@ -1,4 +1,7 @@
 create database mysqldb;
+
+create table mysqldb.Departamento( DepartamentoId int auto_increment, DepartamentoNome nvarchar(500), PRIMARY KEY(DepartamentoId) );
+
 insert into mysqldb.departamento(DepartamentoNome) values ('TI');
 insert into mysqldb.departamento(DepartamentoNome) values ('SUPORTE');
 
