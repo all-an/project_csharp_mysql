@@ -5,7 +5,7 @@ namespace DataLibrary
 {
     public interface IAcessoDados
     {
-        List<T> CarregaDado<T, U>(string sql, U parametros, string stringDeConexaoDB);
+        Task<List<T>> CarregaDado<T, U>(string sql, U parametros, string stringDeConexaoDB);
         Task SalvaDado<T>(string sql, T parametros, string stringDeConexaoDB);
     }
 }

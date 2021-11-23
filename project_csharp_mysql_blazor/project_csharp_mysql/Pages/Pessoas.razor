@@ -1,10 +1,34 @@
-﻿@page "/fetchdata"
+﻿@page "/pessoas"
 
 @using DataLibrary
+@using project_csharp_mysql.Models
+@using Microsoft.Extensions.Configuration
 @inject IAcessoDados _dados
+@inject IConfiguration _config
 
 <h3>Pessoas</h3>
 
-@code {
+@if (pessoas == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @foreach (var p in pessoas)
+                {
+                    <p>
+                        @p.DepartamentoNome @p.Responsavel
+                    </p>
+                }
+}
 
+@code {
+    List<PessoasModel> pessoas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "select * from mysqldb.departamento";
+
+        pessoas = await _dados.CarregaDado<PessoasModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
+    }
 }

@@ -18,7 +18,7 @@ namespace DataLibrary
             {
                 var rows = await conexao.QueryAsync<T>(sql, parametros);
 
-                return rows;
+                return rows.ToList();
             }
         }
 
