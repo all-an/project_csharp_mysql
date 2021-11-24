@@ -29,7 +29,9 @@ else
 
     private async Task InserirDado()
     {
-        string sql = "insert into departamento (DepartamentoNome, Responsavel) values ";
+        string sql = "insert into mysqldb.departamento (DepartamentoNome, Responsavel) values (@DepartamentoNome , @Responsavel);";
+
+        await _dados.SalvaDado(sql, new { DepartamentoNome = "AppSec", Responsavel = "Elliot Alderson" }, _config.GetConnectionString("default"));
     }
 
     protected override async Task OnInitializedAsync()
