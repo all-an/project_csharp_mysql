@@ -29,14 +29,23 @@ else
 
     private async Task InserirDado()
     {
-        string sql = "insert into mysqldb.departamento (DepartamentoNome, Responsavel) values (@DepartamentoNome , @Responsavel);";
+        string sql = "INSERT INTO mysqldb.departamento (DepartamentoNome, Responsavel) VALUES (@DepartamentoNome , @Responsavel);";
 
-        await _dados.SalvaDado(sql, new { DepartamentoNome = "AppSec", Responsavel = "Elliot Alderson" }, _config.GetConnectionString("default"));
+        await _dados.SalvaDado(sql, new { DepartamentoNome = "APPSEC", Responsavel = "Elliot Alderson" }, _config.GetConnectionString("default"));
+    }
+
+    private async Task UpdateDados()
+    {
+        string sql = "UPDATE mysqldb.departamento SET DepartamentoNome = @DepartamentoNome WHERE Responsavel = @Responsavel)";
+
+        await _dados.SalvaDado(sql, new { DepartamentoNome = "C#DEV", Responsavel = "Forrest Gump" }, _config.GetConnectionString("default"));
+
+        await OnInitializedAsync();
     }
 
     protected override async Task OnInitializedAsync()
     {
-        string sql = "select * from mysqldb.departamento";
+        string sql = "SELECT * FROM mysqldb.departamento";
 
         pessoas = await _dados.CarregaDado<PessoasModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
     }

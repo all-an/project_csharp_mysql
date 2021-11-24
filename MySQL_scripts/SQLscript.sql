@@ -1,17 +1,17 @@
-create database mysqldb;
+CREATE DATABASE mysqldb;
 
-create table mysqldb.Departamento( DepartamentoId int auto_increment, DepartamentoNome nvarchar(500), PRIMARY KEY(DepartamentoId) );
+CREATE TABLE mysqldb.Departamento( DepartamentoId INT AUTO_INCREMENT, DepartamentoNome NVARCHAR(500), PRIMARY KEY(DepartamentoId) );
 
-insert into mysqldb.departamento(DepartamentoNome) values ('TI');
-insert into mysqldb.departamento(DepartamentoNome) values ('SUPORTE');
+INSERT INTO mysqldb.departamento(DepartamentoNome) VALUES ('TI');
+INSERT INTO mysqldb.departamento(DepartamentoNome) VALUES ('SUPORTE');
 
-insert into mysqldb.departamento(DepartamentoNome) values ('MARKETING');
+INSERT INTO mysqldb.departamento(DepartamentoNome) VALUES ('MARKETING');
 
-insert into mysqldb.departamento(DepartamentoNome) values ('DEV');
+INSERT INTO mysqldb.departamento(DepartamentoNome) VALUES ('DEV');
 
-insert into mysqldb.departamento(DepartamentoNome) values ('NEGOCIOS');
+INSERT INTO mysqldb.departamento(DepartamentoNome) VALUES ('NEGOCIOS');
 
-insert into mysqldb.departamento(DepartamentoNome) values ('VENDAS');
+INSERT INTO mysqldb.departamento(DepartamentoNome) VALUES ('VENDAS');
 
 ALTER TABLE mysqldb.departamento ADD COLUMN Responsavel VARCHAR(100) AFTER DepartamentoNome;
 
@@ -27,7 +27,9 @@ UPDATE mysqldb.departamento SET Responsavel = 'James Bond' WHERE DepartamentoId 
 
 UPDATE mysqldb.departamento SET Responsavel = 'Coheed Killgannon' WHERE DepartamentoId = 6;
 
-SELECT * FROM mysqldb.departamento
+SELECT * FROM mysqldb.departamento;
+
+TRUNCATE TABLE mysqldb.departamento; /*resetei a TABLE e a primary key*/
 
 
 
