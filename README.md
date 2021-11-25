@@ -2,5 +2,5 @@
 Um CRUD no Browser com C# , MySQL e Blazor 
 
 
-<video src="/video.mp4" width=180/>
+[![Alt text]()](https://www.youtube.com/watch?v=CLoUY1kA4ZY)
 
