@@ -1,17 +1,14 @@
-<<<<<<< HEAD
+
 # CRUD no Browser com HTML, C#, MySql e Blazor
+
 ## _"what we know is a drop, what we don't know is a ocean" (newton)_
-=======
+
 
 Um CRUD no Browser com C# , MySQL e Blazor 
 
->>>>>>> 739df57125d1652e5ef79f2a51a1a96e796d2bd6
 
 [Video Explicando o Projeto](https://www.youtube.com/watch?v=SvMqfH9RUSs)
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodeource.com/products/nsolid)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Bibliotecas Nuget utilizadas:
 
