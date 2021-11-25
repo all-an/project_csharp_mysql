@@ -2,6 +2,8 @@
 # CRUD no Browser com HTML, C#, MySql e Blazor
 ## _"what we know is a drop, what we don't know is a ocean" (newton)_
 
+### Como utilizar o Blazor e C# para inserir e modificar dados de um banco de dados MySQL
+
 > Nota: `Para executar basta clonar e instalar as biblioetecas abaixo`  
 
 Bibliotecas Nuget utilizadas:
