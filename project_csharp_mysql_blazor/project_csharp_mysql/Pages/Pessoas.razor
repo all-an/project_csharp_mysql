@@ -9,7 +9,8 @@
 <h3>Responsáveis pelos setores:</h3>
 
 <button class="btn btn-primary" @onclick="InserirDado">Inserir</button>
-<button class="btn btn-primary" @onclick="InserirDado">Inserir</button>
+<button class="btn btn-warning" @onclick="UpdateDados">Atualizar</button>
+<button class="btn btn-danger" @onclick="DeletarDados">Deletar</button>
 
 @if (pessoas == null)
 {
@@ -20,7 +21,7 @@ else
     @foreach (var p in pessoas)
                 {
                     <p>
-                        @p.DepartamentoNome @p.Responsavel
+                        @p.DepartamentoId @p.DepartamentoNome @p.Responsavel
                     </p>
                 }
 }
@@ -37,9 +38,18 @@ else
 
     private async Task UpdateDados()
     {
-        string sql = "UPDATE mysqldb.departamento SET DepartamentoNome = @DepartamentoNome WHERE Responsavel = @Responsavel)";
+        string sql = "UPDATE mysqldb.departamento SET Responsavel = @Responsavel WHERE DepartamentoId = @DepartamentoId;";
 
-        await _dados.SalvaDado(sql, new { DepartamentoNome = "C#DEV", Responsavel = "Forrest Gump" }, _config.GetConnectionString("default"));
+        await _dados.SalvaDado(sql, new { Responsavel = "Kevin Mitnick", DepartamentoId = 8 }, _config.GetConnectionString("default"));
+
+        await OnInitializedAsync();
+    }
+
+    private async Task DeletarDados()
+    {
+        string sql = "UPDATE mysqldb.departamento SET Responsavel = @Responsavel WHERE DepartamentoId = @DepartamentoId;";
+
+        await _dados.SalvaDado(sql, new { Responsavel = "Kevin Mitnick", DepartamentoId = 8 }, _config.GetConnectionString("default"));
 
         await OnInitializedAsync();
     }
