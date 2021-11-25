@@ -82,7 +82,7 @@ Botões integrados ao Blazor chamando os métodos acima para alterar o banco de 
 <button class="btn btn-danger" @onclick="DeletarDados">Deletar</button>
 ```
 
-## Código C# integrado o HTML
+## Código C# integrando o HTML
 
 > Nota: `Veja os arquivos completos no projeto`  
 
