@@ -4,7 +4,7 @@
 
 ### Como utilizar o Blazor e C# para inserir e modificar dados de um banco de dados MySQL
 
-> Nota: `Para executar basta clonar e instalar as biblioetecas abaixo`  
+> Nota: `Para executar basta clonar e instalar as biblioetecas Nuget abaixo no Visual Studio`  
 
 Bibliotecas Nuget utilizadas:
 
