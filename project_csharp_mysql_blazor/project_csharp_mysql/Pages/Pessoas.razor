@@ -18,12 +18,26 @@
 }
 else
 {
-    @foreach (var p in pessoas)
-                {
-                    <p>
-                        @p.DepartamentoId @p.DepartamentoNome @p.Responsavel
-                    </p>
-                }
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Identificação</th>
+                <th>Nome do Setor</th>
+                <th>Responsável</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in pessoas)
+            {
+                <tr>
+                    <td>@p.DepartamentoId</td>
+                    <td>@p.DepartamentoNome</td>
+                    <td>@p.Responsavel</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 }
 
 @code {
