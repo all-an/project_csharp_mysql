@@ -33,7 +33,9 @@ else
     {
         string sql = "INSERT INTO mysqldb.departamento (DepartamentoNome, Responsavel) VALUES (@DepartamentoNome , @Responsavel);";
 
-        await _dados.SalvaDado(sql, new { DepartamentoNome = "APPSEC", Responsavel = "Elliot Alderson" }, _config.GetConnectionString("default"));
+        await _dados.SalvaDado(sql, new { DepartamentoNome = "C", Responsavel = "Dennis Ritchie" }, _config.GetConnectionString("default"));
+
+        await OnInitializedAsync();
     }
 
     private async Task UpdateDados()
@@ -47,9 +49,9 @@ else
 
     private async Task DeletarDados()
     {
-        string sql = "UPDATE mysqldb.departamento SET Responsavel = @Responsavel WHERE DepartamentoId = @DepartamentoId;";
+        string sql = "DELETE FROM mysqldb.departamento WHERE DepartamentoId = @DepartamentoId;";
 
-        await _dados.SalvaDado(sql, new { Responsavel = "Kevin Mitnick", DepartamentoId = 8 }, _config.GetConnectionString("default"));
+        await _dados.SalvaDado(sql, new { DepartamentoId = 8 }, _config.GetConnectionString("default"));
 
         await OnInitializedAsync();
     }
