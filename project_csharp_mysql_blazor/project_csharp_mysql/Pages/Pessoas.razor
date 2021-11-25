@@ -6,7 +6,7 @@
 @inject IAcessoDados _dados
 @inject IConfiguration _config
 
-<h3>Responsáveis pelos setores:</h3>
+<h3>Coordenadores dos setores:</h3>
 
 <button class="btn btn-primary" @onclick="InserirDado">Inserir</button>
 <button class="btn btn-warning" @onclick="UpdateDados">Atualizar</button>
@@ -47,7 +47,7 @@ else
     {
         string sql = "INSERT INTO mysqldb.departamento (DepartamentoNome, Responsavel) VALUES (@DepartamentoNome , @Responsavel);";
 
-        await _dados.SalvaDado(sql, new { DepartamentoNome = "C", Responsavel = "Dennis Ritchie" }, _config.GetConnectionString("default"));
+        await _dados.SalvaDado(sql, new { DepartamentoNome = "Desenvolvimento C", Responsavel = "Dennis Ritchie" }, _config.GetConnectionString("default"));
 
         await OnInitializedAsync();
     }
@@ -56,7 +56,7 @@ else
     {
         string sql = "UPDATE mysqldb.departamento SET Responsavel = @Responsavel WHERE DepartamentoId = @DepartamentoId;";
 
-        await _dados.SalvaDado(sql, new { Responsavel = "Kevin Mitnick", DepartamentoId = 8 }, _config.GetConnectionString("default"));
+        await _dados.SalvaDado(sql, new { Responsavel = "Ken Thompson", DepartamentoId = 1 }, _config.GetConnectionString("default"));
 
         await OnInitializedAsync();
     }
@@ -65,7 +65,7 @@ else
     {
         string sql = "DELETE FROM mysqldb.departamento WHERE DepartamentoId = @DepartamentoId;";
 
-        await _dados.SalvaDado(sql, new { DepartamentoId = 8 }, _config.GetConnectionString("default"));
+        await _dados.SalvaDado(sql, new { DepartamentoId = 2 }, _config.GetConnectionString("default"));
 
         await OnInitializedAsync();
     }
