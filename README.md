@@ -117,15 +117,16 @@ else
 }
 ```
 
-| Muito Obrigado | README |
+| Muito Obrigado | |
 | ------ | ------ |
-| Github | [test/test][PlDb] |
+| Linkedin | [https://www.linkedin.com/in/all-an/] |
 
 ## Development
 
-```sh
-test
-```
+| IDE | Visual Studio 2019 Community |
+| ------ | ------ |
+| .NET | C# | Blazor |
+
 
 
 
@@ -133,8 +134,8 @@ test
 
 For production release:
 
-```sh
-build 
+```cs
+dotnet
 ```
 
 
