@@ -1,5 +1,8 @@
 
 # CRUD no Browser com HTML, C#, MySql e Blazor
+
+[Breve video explicando o funcionamento](https://youtu.be/SvMqfH9RUSs)
+
 ## _"what we know is a drop, what we don't know is a ocean" (newton)_
 
 ### Como utilizar o Blazor e C# para inserir e modificar dados de um banco de dados MySQL
