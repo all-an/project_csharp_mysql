@@ -14,10 +14,8 @@ Bibliotecas Nuget utilizadas:
 
 ## Caracteristicas
 
-- Ler dados de uma tabela SQL 
-- Métodos para Inserir, Atualizar e Deletar dados nesta tabela
-- Renderização front end em C# com HTML
-- Integração do MySql com o C# na classe AcessoDados
+- InMemory Data Storage 
+- Dependency Injection
 
 ## Método de acesso ao DB
 ```cs
