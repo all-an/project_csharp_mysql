@@ -7,6 +7,8 @@
 
 > Nota: `Para executar basta clonar e instalar as biblioetecas Nuget abaixo no Visual Studio`  
 
+- .NET 5.0
+
 Bibliotecas Nuget utilizadas:
 
 - Dapper
